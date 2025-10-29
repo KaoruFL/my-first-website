@@ -390,6 +390,14 @@ nav a:hover {
     padding: 2rem 5%;
 }
 
+.content-section#favorite,
+.content-section#stats {
+    min-height: auto; /* 關鍵！取消最小高度限制 */
+    height: auto;     /* 讓高度由內容自然決定 */
+    padding-top: 150px; /* 補回一些頂部間距，避免貼著上一個區塊 */
+    padding-bottom: 100px;/* 增加一些底部間距 */
+}
+
 .content-section:last-child {
     border-bottom: none;
 }
@@ -513,8 +521,8 @@ footer {
 
 .video-container {
     position: relative;
-    width: 80%;
-    max-width: 854px;   /* 您可以設定一個影片的最大寬度 */
+    width: 100%;
+    max-width: 600px;   /* 您可以設定一個影片的最大寬度 */
     margin: 2rem auto 0; /* 影片上方留白、左右自動置中 */
     overflow: hidden;
     padding-top: 56.25%; /* 關鍵！這代表 16:9 的長寬比 (9 / 16 = 0.5625) */
