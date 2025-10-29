@@ -190,28 +190,30 @@ nav a:hover {
 
 /* ===== 內容區塊通用設定 ===== */
 .content-wrapper {
-    /* 移除這裡的 padding，交給 content-section 處理 */
     background-color: #101024;
 }
 
+/* 這是所有區塊共用的最基礎樣式 */
 .content-section {
     border-bottom: 1px solid var(--placeholder-bg);
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    scroll-margin-top: 80px;
-    padding: 4rem 10%; /* 將 padding 統一放在這裡 */
+    scroll-margin-top: 75px;
+    padding: 100px 10%; /* 給予一個基礎的上下內距 */
 }
 
 .content-section:last-child {
     border-bottom: none;
 }
 
+/* 這是控制動畫的 class，保持不變 */
 .content-section.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
+/* 通用的標題和段落樣式 */
 .content-section h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
@@ -227,25 +229,15 @@ nav a:hover {
     text-align: center;
 }
 
-/* --- 全螢幕區塊設定 --- */
-.content-section#about,
-.content-section#members {
+/* 【重要】這是一個獨立的 class，只用來實現全螢幕置中 */
+.fullscreen-section {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 2rem 5%; /* 全螢幕區塊使用較小的上下內距 */
 }
-
-/* --- 內容高度區塊設定 (影片和圖表的例外規則) --- */
-.content-section#favorite,
-.content-section#stats {
-    min-height: auto; /* 關鍵！取消高度限制 */
-    height: auto;
-    padding-top: 150px;
-    padding-bottom: 100px;
-}
-
 
 /* ===== Members 區塊 ===== */
 .members-grid {
@@ -298,7 +290,7 @@ nav a:hover {
 .video-container {
     position: relative;
     width: 100%;
-    max-width: 600px;
+    max-width: 1920px;
     margin: 2rem auto 0;
     overflow: hidden;
     padding-top: 56.25%; /* 16:9 Aspect Ratio */
