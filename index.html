@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mypage</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div id="loader">
+        <div class="loader-text">LOADING...</div>
+    </div>
+
+    <header id="main-header">
+        <div class="logo">
+<a href="#">
+            <img src="images/logo.jpg" alt="網站Logo">
+</a>
+        </div>
+
+	<h1 class="animated-text"></h1>
+
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#members">Members</a></li>
+                <li><a href="#favorite">Favorite</a></li>
+		<li><a href="#stats">Stats</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="hero">
+        <div class="hero-background">
+            <img src="images/main.jpg" alt="主視覺背景">
+        </div>
+	<div class="hero-content">
+    	    <div class="character-placeholders">
+        	<img src="images/Main Header/1.png" alt="角色1" class="character" id="char-1">
+        	<img src="images/Main Header/2.png" alt="角色1" class="character" id="char-2">
+        	<img src="images/Main Header/3.png" alt="角色1" class="character" id="char-3">
+        	<img src="images/Main Header/4.png" alt="角色1" class="character" id="char-4">
+        	<img src="images/Main Header/5.png" alt="角色1" class="character" id="char-5">
+        	<img src="images/Main Header/6.png" alt="角色1" class="character" id="char-6">
+        	<img src="images/Main Header/7.png" alt="角色1" class="character" id="char-7">
+        	<img src="images/Main Header/8.png" alt="角色1" class="character" id="char-8">
+        	<img src="images/Main Header/9.png" alt="角色1" class="character" id="char-9">
+        	<img src="images/Main Header/10.png" alt="角色1" class="character" id="char-10">
+        	<img src="images/Main Header/11.png" alt="角色1" class="character" id="char-11">
+        	<img src="images/Main Header/12.png" alt="角色1" class="character" id="char-12">
+        	<img src="images/Main Header/13.png" alt="角色1" class="character" id="char-13">
+        	<img src="images/Main Header/14.png" alt="角色1" class="character" id="char-14">
+        	<img src="images/Main Header/15.png" alt="角色1" class="character" id="char-15">
+        	<img src="images/Main Header/16.png" alt="角色1" class="character" id="char-16">
+        	<img src="images/Main Header/17.png" alt="角色1" class="character" id="char-17">
+        	<img src="images/Main Header/18.png" alt="角色1" class="character" id="char-18">
+        	<img src="images/Main Header/19.png" alt="角色1" class="character" id="char-19">
+        	<img src="images/Main Header/20.png" alt="角色1" class="character" id="char-20">
+        	<img src="images/Main Header/21.png" alt="角色1" class="character" id="char-21">
+        	<img src="images/Main Header/22.png" alt="角色1" class="character" id="char-22">
+        	<img src="images/Main Header/23.png" alt="角色1" class="character" id="char-23">
+    	</div>
+    </div>
+    </main>
+
+    <div class="content-wrapper">
+        <section id="about" class="content-section">
+            <h2>About VSPO!</h2>
+            <p>VSPO!是由日本公司Brave Group所經營的「次世代バーチャルeスポーツプロジェクト」的VTuber團體<br>團體主打「遊戲／電競」為核心活動，成員們以 VTuber 身份進行遊戲實況、參加電競賽事、並透過多媒體展開活動，結合了「遊戲」與「VTuber」</p>
+        </section>
+
+        <section id="members" class="content-section">
+            <h2>Members</h2>
+            <div class="members-grid">
+		<div class="member-info">
+            	    <div class="member-image-wrapper">
+                    <img src="images/members.webp" alt="主要成員照片" class="main-member-photo">
+                </div>
+            	<div class="member-details">
+                    <p>目前VSPO JP成員共有23位，除此之外還有著英語系為主的EN成員</p>
+            	</div>
+            </div>
+        </section>
+
+        <section id="favorite" class="content-section">
+            <h2>Favorite</h2>
+            <p></p>
+
+            <div class="video-container">
+	    	<iframe width="560" height="315" src="https://www.youtube.com/embed/9DDMbc06-No?si=bxZYWDhxfW9Wd9PH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	    </div>
+        </section><section id="stats" class="content-section">
+    	    <h2>訂閱數前三名統計</h2>
+    	    <p>這裡是目前支持者的前三名排行榜！</p>
+
+    	    <div class="chart-container">
+        	<canvas id="myChart"></canvas>
+    	    </div>
+	</section>
+    </div>
+
+    <footer>
+<div class="social-links">
+        <h3>Others</h3>
+        <ul>
+            <li>
+                <a href="https://www.youtube.com/你的頻道" target="_blank" rel="noopener noreferrer">link1</a>
+            </li>
+            <li>
+                <a href="https://twitter.com/你的帳號" target="_blank" rel="noopener noreferrer">link2</a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/你的粉絲頁" target="_blank" rel="noopener noreferrer">link3</a>
+            </li>
+            </ul>
+    </div>
+
+        <p>&copy; My work space.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+<script>
+    // 等待頁面元素都載入完成後再執行
+    document.addEventListener('DOMContentLoaded', () => {
+        // 1. 找到我們的 canvas 元素
+        const ctx = document.getElementById('myChart');
+
+        // 確保 canvas 元素存在才繼續執行
+        if (ctx) {
+            // 2. 在這裡修改您的資料！
+            const subscriberNames = ['橘ひなの', '駒里めと', '胡桃のあ'];
+            const subscriberCounts = [93.7, 80.7, 76.7];
+
+            // 3. 建立新的圖表
+            new Chart(ctx, {
+                type: 'bar', // 圖表類型
+                data: {
+                    labels: subscriberNames,
+                    datasets: [{
+                        label: '訂閱數',
+                        data: subscriberCounts,
+                        backgroundColor: [
+                            'rgba(255, 64, 160, 0.6)',
+                            'rgba(255, 159, 64, 0.6)',
+                            'rgba(255, 205, 86, 0.6)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 64, 160, 1)',
+                            'rgba(255, 159, 64, 1)',
+                            'rgba(255, 205, 86, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+    scales: {
+        y: {
+            beginAtZero: true,
+            ticks: {
+                color: '#f0f0f0',
+                // 1. 修改 Y 軸刻度，在數字後加上 " 萬"
+                callback: function(value) {
+                    return value + ' 萬';
+                }
+            }
+        },
+        x: {
+            ticks: {
+                color: '#f0f0f0'
+            }
+        }
+    },
+    plugins: {
+        legend: {
+            labels: {
+                color: '#f0f0f0'
+            }
+        },
+        // 2. 修改滑鼠懸停提示框的內容
+        tooltip: {
+            callbacks: {
+                label: function(context) {
+                    let label = context.dataset.label || '';
+                    if (label) {
+                        label += ': ';
+                    }
+                    if (context.parsed.y !== null) {
+                        label += context.parsed.y + ' 萬';
+                    }
+                    return label;
+                }
+            }
+        }
+    }
+}
+            });
+        }
+    });
+</script>
+</body>
+</html>
