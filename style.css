@@ -513,7 +513,7 @@ footer {
 
 .video-container {
     position: relative;
-    width: 100%;
+    width: 80%;
     max-width: 854px;   /* 您可以設定一個影片的最大寬度 */
     margin: 2rem auto 0; /* 影片上方留白、左右自動置中 */
     overflow: hidden;
